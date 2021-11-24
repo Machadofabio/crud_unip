@@ -51,23 +51,49 @@ namespace Cadastro
 
         void PessoaDAO.insira(Pessoa p)
         {
+            insertDataTabelaPessoa(p);
+            insertDataTabelaEndereco(p);
+            insertEnderecoTabelaPessoa();
+            insertDataTabelaTelefone(p);
+            insertDataTabelaPessoaTelefone();
+        }
+
+        void insertDataTabelaPessoa(Pessoa p)
+        {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandText = "INSERT INTO Pessoa (nome, cpf) " +
                 "VALUES ('" + p.nome + "', " + p.cpf + "); ";
-
-            cmd.CommandText = "INSERT INTO Pessoa (endereco)" +
-                " SELECT (Id) FROM Endereco";
-
-            cmd.CommandText = "INSERT INTO Pessoa_Telefone(id_pessoa, id_telefone) " +
-                "SELECT (Id) FROM Pessoa AND SELECT (Id) FROM Telefone";
-        
+            cmd.ExecuteNonQuery();
+        }
+        void insertEnderecoTabelaPessoa()
+        {
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandText = "INSERT INTO Pessoa (endereco) " +
+                " SELECT (Id) FROM Endereco"; 
+            cmd.ExecuteNonQuery();
+        }
+        void insertDataTabelaEndereco(Pessoa p)
+        {
+            SqlCommand cmd = con.CreateCommand();
             cmd.CommandText = "INSERT INTO Endereco (logradouro, numero, cep, bairro, cidade, estado) " +
-                "VALUES ('" + p.endereco.logradouro + "', " + p.endereco.numero + ", " + p.endereco.cep + 
-                ", " + p.endereco.bairro + ", " + p.endereco.cidade + ", " + p.endereco.estado + ");";
- 
+                 "VALUES ('" + p.endereco.logradouro + "', " + p.endereco.numero + ", " + p.endereco.cep +
+                 ", " + p.endereco.bairro + ", " + p.endereco.cidade + ", " + p.endereco.estado + ");";
+            cmd.ExecuteNonQuery();
+        }
+        void insertDataTabelaTelefone(Pessoa p)
+        {
+            SqlCommand cmd = con.CreateCommand();
             cmd.CommandText = "INSERT INTO Telefone (numero, ddd, tipo) " +
                 "VALUES ('" + p.telefone.numero + "', " + p.telefone.ddd + ", " + p.telefone.tipo + ");";
             cmd.ExecuteNonQuery();
         }
+        void insertDataTabelaPessoaTelefone()
+        {
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandText = "INSERT INTO Pessoa_Telefone(id_pessoa, id_telefone) " +
+                "SELECT (Id) FROM Pessoa AND SELECT (Id) FROM Telefone";
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }
