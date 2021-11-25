@@ -1,0 +1,46 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+body {
+    font-family: sans-serif;
+}
+
+#form1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 392px;
+    border:1px solid Gray;
+    padding: 0rem 1rem 2rem 1rem;
+    }
+
+h1 {
+    text-align: center;
+    font-family: 'Pangolin', cursive;
+}
+
+.label{
+    margin-left: 3px;
+}
+
+.txtBox{
+    border-width: 1px;
+    margin: 0px 0px 3px 3px;
+}
+
+.btnsHeader{
+   margin-left: 16px;
+}
+
+.divHeader {
+    margin-left: 3px;
+}
+
+#ImageButtonConsulte, #ImageButtonAltere, #ImageButtonExclua {
+    margin-left: 12px;
+}
+
+#btnInsira {
+    cursor: pointer;
+    margin-top: 12px;
+}

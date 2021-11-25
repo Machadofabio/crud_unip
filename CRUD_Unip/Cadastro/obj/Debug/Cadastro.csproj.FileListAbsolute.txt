@@ -1,6 +1,0 @@
-C:\Users\Fabio Machado\Desktop\Faculdade\Projetos\Pim 8\CRUD_Unip\Cadastro\bin\Debug\Cadastro.dll
-C:\Users\Fabio Machado\Desktop\Faculdade\Projetos\Pim 8\CRUD_Unip\Cadastro\bin\Debug\Cadastro.pdb
-C:\Users\Fabio Machado\Desktop\Faculdade\Projetos\Pim 8\CRUD_Unip\Cadastro\obj\Debug\Cadastro.csprojAssemblyReference.cache
-C:\Users\Fabio Machado\Desktop\Faculdade\Projetos\Pim 8\CRUD_Unip\Cadastro\obj\Debug\Cadastro.csproj.CoreCompileInputs.cache
-C:\Users\Fabio Machado\Desktop\Faculdade\Projetos\Pim 8\CRUD_Unip\Cadastro\obj\Debug\Cadastro.dll
-C:\Users\Fabio Machado\Desktop\Faculdade\Projetos\Pim 8\CRUD_Unip\Cadastro\obj\Debug\Cadastro.pdb
